@@ -28,17 +28,17 @@ class ColoredBoxes extends Canvas
 	public void drawBoxes(Graphics window)
 	{
 
-int w = 20;
-int h = 20;
-int t = 40;
-for (int x = 40; x <= 800; x+=30) {
-   window.fillRect( x, t, w, h );
-	 for (t = 40; t <= 800; t+=30)
-	 {
-		 window.fillRect( x, t, w, h );
-	 }
- }
+		int pix = 5;
+		int w = pix;
+		int h = pix;
 
+		for (int x = 0; x <= getWidth(); x+=pix)
+		{
 
-	}
+				for (int t= 100; t <= getHeight(); t+=pix)
+				{
+		 					window.fillRect( x, t, w, h );
+	 				}
+ 			}
+		}
 }

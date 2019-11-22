@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 public class RandomColoredBoxes extends JPanel
 {
 	private Timer timer;
-	private final static int SLEEP = 110;
+	private final static int SLEEP = 1;
 
 	public RandomColoredBoxes()
 	{
@@ -52,13 +52,14 @@ public class RandomColoredBoxes extends JPanel
 			//for loop to go down the y - getHeight() might be useful
 
 				//draw random colored boxes
-				int w = 20;
-				int h = 20;
-				int t = 40;
-				for (int x = 40; x <= 800; x+=30)
+				int pix = 5;
+				int w = pix;
+				int h = pix;
+
+				for (int x = 0; x <= getWidth(); x+=pix)
 				{
 
-						for (t = 40; t <= 800; t+=30)
+						for (int t= 100; t <= getHeight(); t+=pix)
 						{
 							int R = (int) (Math.random( )*256);
 							int G = (int)(Math.random( )*256);
