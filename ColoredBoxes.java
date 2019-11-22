@@ -28,7 +28,7 @@ class ColoredBoxes extends Canvas
 	public void drawBoxes(Graphics window)
 	{
 
-		int pix = 5;
+		int pix = 10;
 		int w = pix;
 		int h = pix;
 
