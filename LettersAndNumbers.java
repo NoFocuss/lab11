@@ -37,24 +37,40 @@ public class LettersAndNumbers
 		String output="";
 
 
-    for (int i = amount; i > 0; i-- ) //how many boxes
+    for (int i = 1; i <= amount; i++ ) //how many lines
     {
       StringBuilder str = new StringBuilder();
       int letterVal = letter;
-      for (int j = amount; j > 0; j--) //contents of each line
-      {
 
+      for (int j = amount; j > 0 ; j--) //contents of each line
+      {
         char fakeLetter = (char)letterVal;
+
         for (int k = j; k > 0; k--) // each box
         {
-
           str.append(fakeLetter);
         }
-        str.append(" ");
-        letterVal -= 1;
 
-        // how many lines
-      }
+        if(j != 1)
+        {
+          str.append(" ");
+        }
+
+        letterVal -= 1;
+        if (letterVal < 65 )
+        {
+          letterVal = 90;
+        }
+
+
+
+        }
+        for (int l = 1; l < i; l++)
+        {
+
+          str.delete(str.lastIndexOf(" "), (str.length()));
+
+        }
       output += str;
       output += "\n";
 
